@@ -73,7 +73,7 @@ a {
 /* Center content and limit its maximum width */
 .container {
   width: min(1180px, 92%);
-  margin: auto;
+  margin: auto; 
 }
 
 /* =========================================
@@ -791,41 +791,107 @@ section {
 }
 
 /* =========================================
-   8. PROJECT IMPLEMENTATION PROCESS
+   FIXED STEP CARDS & ARROWS project section, and arrowed notation of project steps 
    ========================================= */
 
-/* Five-column process timeline */
 .process {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 14px;
-}
-
-/* Individual process step */
-.step {
-  padding: 26px;
-  border-radius: 22px;
-  background: #f7f9f6;
-  border: 1px solid var(--line);
+  gap: 18px;
   position: relative;
 }
 
-/* Large, light-colored step number */
-.num {
-  font: 800 42px Manrope;
-  color: #b9c9bf;
+/* Card container: allow arrow pseudo-element to extend past borders */
+.step.step-bg {
+  min-height: 280px;
+  border-radius: 24px;
+  position: relative;
+  overflow: visible; /* FIXED: Prevents cutting off the arrow */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.step h3 {
-  margin: 16px 0 8px;
-  font-size: 18px;
+/* Move clipping to overlay layer so image stays inside rounded corners */
+.step-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 23px; /* FIXED: Clips background inside card radius */
+  background: linear-gradient(
+    180deg, 
+    rgba(16, 32, 25, 0.25) 0%, 
+    rgba(16, 32, 25, 0.85) 60%, 
+    rgba(10, 20, 15, 0.98) 100%
+  );
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
-.step p {
-  font-size: 13px;
-  color: var(--muted);
+.step.step-bg:hover .step-overlay {
+  background: linear-gradient(
+    180deg, 
+    rgba(17, 107, 75, 0.3) 0%, 
+    rgba(11, 77, 56, 0.9) 65%, 
+    rgba(10, 32, 25, 0.98) 100%
+  );
 }
 
+.step-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+/* FIXED ARROW STYLING */
+.step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -14px; /* Centered on the gap between cards */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 800;
+  color: #102019;
+  background: var(--lime);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* FIXED: Displays above background overlay and adjacent cards */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Ensure earlier steps stack behind later steps so arrow stays on top */
+.step:nth-child(1) { z-index: 5; }
+.step:nth-child(2) { z-index: 4; }
+.step:nth-child(3) { z-index: 3; }
+.step:nth-child(4) { z-index: 2; }
+.step:nth-child(5) { z-index: 1; }
+
+@media (max-width: 1024px) {
+  .process {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .process {
+    grid-template-columns: 1fr;
+  }
+}
 /* =========================================
    9. CALL-TO-ACTION BANNER
    ========================================= */
@@ -1151,7 +1217,8 @@ footer {
   .normal_logo {
     width: 140px;
   }
-}</style>
+}
+</style>
 
 <body>
 
@@ -1207,7 +1274,7 @@ footer {
   <!-- =========================================
        HERO SECTION (Updated to Reference Design)
        ========================================= -->
-  <<!-- =========================================
+  <!-- =========================================
        HERO SECTION (Updated to Match Reference Image)
        ========================================= -->
   <header class="hero">
@@ -1506,59 +1573,73 @@ footer {
     </div>
   </section>
 
-  <!-- =========================================
-       PROJECT PROCESS SECTION
-       ========================================= -->
+ <!-- =========================================
+     PROJECT PROCESS SECTION (FULL CARD IMAGE OVERLAY)
+     ========================================= -->
 
-  <section id="process">
-    <div class="container">
+<section id="process">
+  <div class="container">
 
-      <div class="section-head">
-        <span class="eyebrow">
-          <i class="dot"></i>
-          Simple process
-        </span>
+    <div class="section-head">
+      <span class="eyebrow">
+        <i class="dot"></i>
+        Simple process
+      </span>
 
-        <h2>From first conversation to clean power.</h2>
-      </div>
+      <h2>From first conversation to clean power.</h2>
+    </div>
 
-      <!-- Five steps from consultation to ongoing support -->
-      <div class="process">
+    <!-- Five process cards with background images and text overlays -->
+    <div class="process">
 
-        <div class="step">
+      <div class="step step-bg" style="--bg-url: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80')">
+        <div class="step-overlay"></div>
+        <div class="step-content">
           <div class="num">01</div>
           <h3>Consult</h3>
           <p>Understand your electricity use, goals and budget.</p>
         </div>
+      </div>
 
-        <div class="step">
+      <div class="step step-bg" style="--bg-url: url('https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80')">
+        <div class="step-overlay"></div>
+        <div class="step-content">
           <div class="num">02</div>
           <h3>Survey</h3>
           <p>Assess the site, roof, load and solar potential.</p>
         </div>
+      </div>
 
-        <div class="step">
+      <div class="step step-bg" style="--bg-url: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80')">
+        <div class="step-overlay"></div>
+        <div class="step-content">
           <div class="num">03</div>
           <h3>Design</h3>
           <p>Create the right system and commercial proposal.</p>
         </div>
+      </div>
 
-        <div class="step">
+      <div class="step step-bg" style="--bg-url: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80')">
+        <div class="step-overlay"></div>
+        <div class="step-content">
           <div class="num">04</div>
           <h3>Install</h3>
           <p>Execute installation, testing and commissioning.</p>
         </div>
+      </div>
 
-        <div class="step">
+      <div class="step step-bg" style="--bg-url: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80')">
+        <div class="step-overlay"></div>
+        <div class="step-content">
           <div class="num">05</div>
           <h3>Support</h3>
           <p>Keep the system healthy with ongoing service.</p>
         </div>
-
       </div>
-    </div>
-  </section>
 
+    </div>
+  </div>
+</section>
   <!-- =========================================
        CALL-TO-ACTION SECTION
        ========================================= -->
