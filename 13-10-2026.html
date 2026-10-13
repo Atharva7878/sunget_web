@@ -1,0 +1,2154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Defines character encoding and responsive viewport -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO description for search engines -->
+  <meta name="description" content="SunGET Solar Infra Pvt. Ltd. — solar rooftop, EPC, maintenance, energy audits and sustainable energy solutions in Pune.">
+
+  <!-- Website title displayed in the browser tab -->
+  <title>SunGET Solar Infra | Powering a Smarter Future</title>
+
+  <!-- Preconnect to Google Fonts for faster font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Import website typography -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>/* =========================================
+   1. GLOBAL VARIABLES AND BASE STYLES
+   ========================================= */
+
+/* Centralized color palette and shadow settings */
+:root {
+  --ink: #102019;
+  --muted: #64716b;
+  --green: #116b4b;
+  --green2: #0b4d38;
+  --lime: #d8f25a;
+  --cream: #f5f7f1;
+  --white: #fff;
+  --line: #dfe7e0;
+  --shadow: 0 24px 80px rgba(16,32,25,.10);
+}
+
+/* Apply consistent sizing to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Enable smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set the default page typography and background */
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  background: #fcf9f9;
+  line-height: 1.9;
+}
+
+/* Heading typography */
+h1, h2, h3 {
+  font-family: Manrope, sans-serif;
+  line-height: 1.08;
+  margin: 0;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Center content and limit its maximum width */
+.container {
+  width: min(1180px, 92%);
+  margin: auto; 
+}
+
+/* =========================================
+   2. NAVIGATION BAR AND BRANDING
+   ========================================= */
+
+/* Optional top information bar */
+.top {
+  background: var(--green2);
+  color: #eaf5ee;
+  font-size: 13px;
+}
+
+.top .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+}
+
+/* Sticky navigation with a translucent background */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #edf1ed;
+}
+
+/* Align logo and navigation links horizontally */
+.navin {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand name and logo layout */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-weight: 800;
+}
+
+/* Decorative logo background */
+.mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--green);
+  position: relative;
+  box-shadow: 0 8px 20px rgba(17,107,75,.2);
+}
+
+/* Add a sun symbol to the decorative logo */
+.mark:after {
+  content: "☀";
+  position: absolute;
+  color: var(--lime);
+  font-size: 22px;
+  left: 8px;
+  top: 4px;
+}
+
+/* Small company descriptor under the brand name */
+.brand small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--green);
+}
+
+/* Desktop navigation links */
+.links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Highlight navigation links on hover */
+.links a:hover {
+  color: var(--green);
+}
+
+/* Reusable primary button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 999px;
+  padding: 13px 21px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+}
+
+/* Button hover animation */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(17,107,75,.2);
+}
+
+/* Secondary button with a light background */
+.btn.light {
+  background: #fff;
+  color: var(--green);
+  border: 1px solid #d9e5dd;
+}
+
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
+
+/* Main landing area with a soft green gradient */
+/* Main landing area with background image and dark overlay */
+/* Main landing area with background image and side-gradient overlay */
+.hero {
+  background: 
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat;
+  color: var(--white);
+  overflow: hidden;
+}
+
+/* Align left content and form properly */
+.hero .container {
+  align-items: flex-start;
+  padding: 70px 0 90px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Make heading text bold, white, and tightly spaced */
+.hero h1 {
+  font-size: clamp(42px, 5vw, 68px);
+  letter-spacing: -2px;
+  margin: 0 0 15px 0;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+/* Hero sub-description */
+.hero-sub {
+  max-width: 550px;
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero h1 span {
+  color: var(--lime); /* Updated to lime so it pops against the dark background */
+}
+
+/* Hero description (lighter muted text for dark background) */
+.hero p {
+  max-width: 600px;
+  color: #cde4d7;
+  font-size: 18px;
+}
+/* --- NEW HERO ELEMENTS (Badges & Rating) --- */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+
+.google-rating {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #cde4d7;
+}
+
+.rating-pill {
+  background: #fff;
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* --- RIGHT SIDE HERO FORM CARD --- */
+.hero-form-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+  color: var(--ink);
+}
+
+.hero-form-card h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.form-subtitle {
+  color: var(--muted) !important;
+  font-size: 14px !important;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* Force hero form inputs to stack in a single column */
+.hero-form.form {
+  border: none;
+  padding: 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Monthly Bill Buttons Styling */
+.field-label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+  color: var(--ink);
+}
+
+.bill-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.bill-radio input {
+  display: none; /* Hide default radio circle */
+}
+
+.bill-radio span {
+  display: block;
+  text-align: center;
+  padding: 12px 5px;
+  background: #f7f9f6;
+  border: 1px solid #d8e1da;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Change styling when a bill button is selected */
+.bill-radio input:checked + span {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+/* Terms Checkbox */
+/* --- Terms Checkbox Alignment Fix --- */
+.terms-check {
+  display: flex;
+  align-items: flex-start; /* Aligns the checkbox with the top line of text */
+  gap: 10px; /* Space between checkbox and text */
+  font-size: 11px;
+  color: var(--muted);
+  cursor: pointer;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.terms-check input[type="checkbox"] {
+  flex-shrink: 0; /* CRITICAL: Stops the checkbox from shrinking/squishing on small screens */
+  width: 16px;    /* Locks the exact width */
+  height: 16px;   /* Locks the exact height */
+  margin: 0;      /* Resets any hidden default browser margins */
+  margin-top: 1px; /* Tiny nudge down so it centers perfectly with the first line of text */
+  accent-color: #0b1536; /* Changes the check color to match your brand */
+  cursor: pointer;
+}
+
+/* Dark/blue gradient CTA */
+.form-cta {
+  background: linear-gradient(135deg, #0b2d20, #1a4a5a) !important;
+  margin-top: 5px;
+}
+/* --- NEW HERO ELEMENTS (Badges & Rating) --- */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+
+.google-rating {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #cde4d7;
+}
+
+.rating-pill {
+  background: #fff;
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* --- RIGHT SIDE HERO FORM CARD --- */
+.hero-form-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+  color: var(--ink);
+}
+
+.hero-form-card h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.form-subtitle {
+  color: var(--muted) !important;
+  font-size: 14px !important;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* Force hero form inputs to stack in a single column */
+.hero-form.form {
+  border: none;
+  padding: 0;
+  grid-template-columns:  1fr;
+  gap: 16px;
+}
+
+/* Monthly Bill Buttons Styling */
+.field-label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+  color: var(--ink);
+}
+
+.bill-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.bill-radio input {
+  display: none; /* Hide default radio circle */
+}
+
+.bill-radio span {
+  display: block;
+  text-align: center;
+  padding: 12px 5px;
+  background: #f7f9f6;
+  border: 1px solid #d8e1da;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Change styling when a bill button is selected */
+.bill-radio input:checked + span {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+/* Terms Checkbox */
+.terms-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.terms-check input {
+  width: auto;
+  margin-top: 2px;
+}
+
+/* Dark/blue gradient CTA */
+.form-cta {
+  background: linear-gradient(135deg, #0b2d20, #1a4a5a) !important;
+  margin-top: 5px;
+}
+/* Two-column hero layout */
+.hero .container {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1.02fr .98fr;
+  align-items: center;
+  gap: 40px;
+  padding: 70px 0;
+}
+
+/* Small uppercase section label */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--green);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Decorative dot beside section labels */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lime);
+}
+
+/* Responsive hero heading */
+.hero h1 {
+  font-size: clamp(48px, 6vw, 78px);
+  letter-spacing: -3px;
+  margin: 18px 0;
+}
+
+/* Highlight part of the hero heading */
+.hero h1 span {
+  color: var(--green);
+}
+
+/* Hero description */
+.hero p {
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+/* Group hero call-to-action buttons */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+/* Hero background image with a dark overlay */
+.hero-art {
+  height: 470px;
+  border-radius: 34px;
+  overflow: hidden;
+  position: relative;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8,50,35,.05),
+      rgba(8,50,35,.55)
+    ),
+    url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+  box-shadow: var(--shadow);
+}
+
+/* Floating information card over the hero image */
+.floating {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 14px 35px rgba(0,0,0,.15);
+  max-width: 240px;
+}
+
+/* Large text inside the floating card */
+.floating b {
+  font-size: 27px;
+}
+
+.floating small {
+  display: block;
+  color: var(--muted);
+}
+
+/* =========================================
+   4. COMPANY STATISTICS
+   ========================================= */
+
+/* Green statistics banner */
+.stats {
+  background: var(--green);
+  color: #fff;
+}
+
+/* Four-column statistics layout */
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 28px 0;
+}
+
+/* Individual statistic item */
+.stat {
+  padding: 5px 25px;
+  border-right: 1px solid rgba(255,255,255,.18);
+}
+
+/* Remove border from the final statistic */
+.stat:last-child {
+  border: 0;
+}
+
+/* Statistic number */
+.stat b {
+  font: 800 30px Manrope;
+}
+
+/* Statistic description */
+.stat span {
+  display: block;
+  color: #cde4d7;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+/* =========================================
+   5. GENERAL SECTION STYLES
+   ========================================= */
+
+/* Standard spacing for page sections */
+section {
+  padding: 100px 0;
+}
+
+/* Heading and description container */
+.section-head {
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+
+.section-head .eyebrow {
+  margin-bottom: 14px;
+}
+
+/* Responsive section headings */
+.section-head h2 {
+  font-size: clamp(36px, 4vw, 54px);
+  letter-spacing: -2px;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+/* =========================================
+   6. SOLAR SOLUTION CARDS
+   ========================================= */
+
+/* Display service cards in four columns */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* Individual service card */
+.card {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 28px;
+  background: #fff;
+  transition: .25s;
+}
+
+/* Lift cards and add a shadow on hover */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-color: #c7d9cc;
+}
+
+/* Icon container for each service */
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #e8f4eb;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  margin-bottom: 24px;
+}
+
+/* Service card heading */
+.card h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+/* Service card description */
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* =========================================
+   WHY CHOOSE US SECTION (Glassmorphism + Image)
+   ========================================= */
+
+.why-choose {
+  position: relative;
+  /* Premium Solar Background Image */
+  background: url("https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat;
+  color: #fff;
+  z-index: 1;
+  padding: 100px 0;
+}
+
+/* Dark Semi-Transparent Gradient Overlay */
+.why-choose::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11, 45, 32, 0.88) 0%, rgba(16, 32, 25, 0.95) 100%);
+  z-index: -1;
+}
+
+/* Subtle Solar Glow/Light Effect */
+.why-choose::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 60%;
+  background: radial-gradient(ellipse at top, rgba(216, 242, 90, 0.12), transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Ensure content stays above overlays */
+.relative-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Header Text Styling */
+.why-head {
+  text-align: center;
+  margin: 0 auto 50px auto;
+}
+
+.why-eyebrow {
+  justify-content: center;
+  color: var(--lime) !important;
+}
+
+.why-dot {
+  background: var(--lime) !important;
+}
+
+.why-head h2 {
+  color: #ffffff;
+}
+
+.why-head p {
+  color: #cde4d7;
+  margin: 15px auto 0 auto;
+}
+
+/* 3-Column Desktop Grid */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Glassmorphism Feature Cards */
+.why-card {
+  background: rgba(255, 255, 255, 0.05); /* Very subtle white tint */
+  border: 1px solid rgba(255, 255, 255, 0.12); /* Subtle light border */
+  backdrop-filter: blur(14px); /* The Glass Effect */
+  -webkit-backdrop-filter: blur(14px); /* For Safari support */
+  border-radius: 24px;
+  padding: 35px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Hover Animation: Lift & Brighten */
+.why-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.1); /* Brighter glass on hover */
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Icon Container */
+.why-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.why-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Icon Fill on Hover */
+.why-card:hover .why-icon {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+/* Typography inside Glass Cards */
+.why-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.why-card p {
+  color: #cde4d7; /* Soft readable greenish-white */
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+/* =========================================
+   FIXED STEP CARDS & ARROWS project section, and arrowed notation of project steps 
+   ========================================= */
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  position: relative;
+}
+
+/* Card container: allow arrow pseudo-element to extend past borders */
+.step.step-bg {
+  min-height: 280px;
+  border-radius: 24px;
+  position: relative;
+  overflow: visible; /* FIXED: Prevents cutting off the arrow */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-image: var(--bg-url);
+  background-size: cover;
+
+  background-position: center;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Move clipping to overlay layer so image stays inside rounded corners */
+.step-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 23px; /* FIXED: Clips background inside card radius */
+  background: linear-gradient(
+    180deg, 
+    rgba(16, 32, 25, 0.25) 0%, 
+    rgba(16, 32, 25, 0.85) 60%, 
+    rgba(10, 20, 15, 0.98) 100%
+  );
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.step.step-bg:hover .step-overlay {
+  background: linear-gradient(
+    180deg, 
+    rgba(17, 107, 75, 0.3) 0%, 
+    rgba(11, 77, 56, 0.9) 65%, 
+    rgba(10, 32, 25, 0.98) 100%
+  );
+}
+
+.step-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+/* FIXED ARROW STYLING */
+.step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -14px; /* Centered on the gap between cards */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 800;
+  color: #102019;
+  background: var(--lime);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* FIXED: Displays above background overlay and adjacent cards */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Ensure earlier steps stack behind later steps so arrow stays on top */
+.step:nth-child(1) { z-index: 5; }
+.step:nth-child(2) { z-index: 4; }
+.step:nth-child(3) { z-index: 3; }
+.step:nth-child(4) { z-index: 2; }
+.step:nth-child(5) { z-index: 1; }
+
+@media (max-width: 1024px) {
+  .process {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .process {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* =========================================
+   9. CALL-TO-ACTION BANNER
+   ========================================= */
+
+/* Outer spacing around the CTA banner */
+.cta {
+  padding: 70px 0;
+}
+
+/* Green CTA container */
+.cta-box {
+  border-radius: 32px;
+  background: linear-gradient(
+    120deg,
+    var(--green2),
+    var(--green)
+  );
+  color: #fff;
+  padding: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Decorative circular graphic in the background */
+.cta-box:after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 80px solid rgba(216,242,90,.08);
+  border-radius: 50%;
+  right: -180px;
+  top: -200px;
+}
+
+.cta h2 {
+  font-size: clamp(35px, 4vw, 52px);
+  max-width: 680px;
+}
+
+.cta p {
+  color: #cde4d7;
+  max-width: 620px;
+}
+
+/* Lime-colored CTA button */
+.cta .btn {
+  background: var(--lime);
+  color: #17351f;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   10. CONTACT DETAILS AND ENQUIRY FORM
+   ========================================= */
+
+/* Contact section background */
+.contact {
+  background: #f7f9f6;
+}
+
+/* Contact details and form columns */
+.contactgrid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 50px;
+}
+
+/* Stack contact information cards */
+.contact-info {
+  display: grid;
+  gap: 14px;
+}
+
+/* Individual contact detail card */
+.info {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.info small {
+  color: var(--muted);
+}
+
+.info b {
+  display: block;
+  margin-top: 3px;
+}
+
+/* Two-column form layout */
+.form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 25px;
+  border: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Shared input, dropdown, and textarea styling */
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #d8e1da;
+  border-radius: 12px;
+  font: inherit;
+  outline: none;
+}
+
+/* Larger message field spanning both columns */
+.form textarea {
+  min-height: 130px;
+  grid-column: 1 / -1;
+  resize: vertical;
+}
+
+/* Make selected form elements span the full width */
+.form .full {
+  grid-column: 1 / -1;
+}
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+
+/* Dark green footer background */
+footer {
+  background: #0b2d20;
+  color: #d7e7de;
+  padding: 60px 0 25px;
+}
+
+/* Main footer columns */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Footer company description */
+.foot p {
+  max-width: 400px;
+  color: #9fb8aa;
+}
+
+/* Footer navigation links */
+.footlinks {
+  display: flex;
+  gap: 22px;
+  font-size: 14px;
+}
+
+/* Copyright information */
+.copy {
+  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: 40px;
+  padding-top: 18px;
+  font-size: 12px;
+  color: #8da89b;
+}
+
+/* Hidden on desktop; enabled for smaller screens */
+.mobile {
+  display: none;
+}
+
+/* Notification shown after form submission */
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #102019;
+  color: #fff;
+  padding: 15px 18px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  display: none;
+  z-index: 30;
+}
+
+/* =========================================
+   12. TABLET AND MOBILE RESPONSIVENESS
+   ========================================= */
+
+/* Tablet layout adjustments */
+@media (max-width: 900px) {
+  /* Hide desktop links and show mobile CTA */
+  .links {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  /* Stack major two-column sections */
+  .hero .container,
+  .splitgrid,
+  .contactgrid {
+    grid-template-columns:  1fr;
+  }
+
+  .hero-art {
+    height: 390px;
+  }
+
+  /* Show statistics in two columns */
+  .stats .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* Two-column service cards and process steps */
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo {
+    height: 400px;
+  }
+
+  /* Stack CTA content vertically */
+  .cta-box {
+    padding: 42px;
+    display: block;
+  }
+
+  .cta .btn {
+    margin-top: 20px;
+  }
+
+  /* Stack footer content */
+  .foot {
+    display: block;
+  }
+
+  .footlinks {
+    margin-top: 25px;
+  }
+
+  /* Single-column form fields on tablet */
+  .form {
+    grid-template-columns: 1fr;
+  }
+  /* Add this inside @media (max-width: 560px) */
+  .bill-options {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-form-card {
+    padding: 25px 20px; /* Smaller padding on phones */
+  }
+}
+
+/* Small mobile phone adjustments */
+@media (max-width: 560px) {
+  section {
+    padding: 72px 0;
+  }
+
+  .hero .container {
+    padding: 55px 0;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  /* Single-column layout for smaller screens */
+  .stats .container,
+  .cards,
+  .process {
+    grid-template-columns: 1fr;
+  }
+
+  /* Separate statistics vertically */
+  .stat {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    padding: 12px 0;
+  }
+
+  /* Hide the optional top information bar */
+  .top .container {
+    display: none;
+  }
+
+  .navin {
+    height: 68px;
+  }
+
+  .hero-art {
+    height: 320px;
+  }
+
+  .cta-box {
+    padding: 32px 25px;
+  }
+}
+
+/* Logo and screen responsiveness */
+.normal_logo {
+  width: 180px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .normal_logo {
+    width: 140px;
+  }
+}
+
+/* =========================================
+   MOBILE HAMBURGER MENU STYLES
+   ========================================= */
+
+/* Hide hamburger button on desktop */
+.hamburger-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  z-index: 20;
+}
+
+/* Hamburger bars styling */
+.hamburger-btn .bar {
+  width: 24px;
+  height: 2.5px;
+  background-color: var(--ink);
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Mobile dropdown container */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  padding: 20px 0 28px;
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Open state for mobile dropdown */
+.mobile-menu.active {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile dropdown link layout */
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f4f1;
+  transition: color 0.2s;
+}
+
+.mobile-link:hover {
+  color: var(--green);
+}
+
+/* Animated "X" state for hamburger icon */
+.hamburger-btn.active .bar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger-btn.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active .bar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Media query to trigger hamburger menu below 900px */
+@media (max-width: 900px) {
+  .links, 
+  .btn.mobile {
+    display: none !important; /* Replaces old mobile link layout */
+  }
+
+  .hamburger-btn {
+    display: flex; /* Show toggle button */
+  }
+}
+/* =========================================
+   CARD HOVER IMAGE EFFECT
+   ========================================= */
+
+/* Ensure the text and icons stay physically on top of the image */
+.why-card > .why-icon, 
+.why-card > h3, 
+.why-card > p {
+  position: relative;
+  z-index: 2; 
+  transition: all 0.4s ease;
+}
+
+/* The hidden background image layer */
+.why-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Hidden by default */
+  transform: scale(1.15); /* Starts slightly zoomed in */
+  transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
+}
+
+/* Dark gradient overlay directly inside the image layer to keep text readable */
+.why-card-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(16,32,25,0.98) 0%, rgba(16,32,25,0.4) 100%);
+}
+
+/* --- THE HOVER TRIGGER --- */
+/* (We use @media (hover: hover) to prevent issues on touch screens/mobile) */
+@media (hover: hover) {
+  .why-card:hover .why-card-bg {
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Zoom to normal */
+  }
+
+  /* Make the icon pop when the dark image appears */
+  .why-card:hover .why-icon {
+    background: rgba(216, 242, 90, 0.95) !important; /* Solid lime */
+    color: #102019 !important; /* Dark ink icon */
+    border-color: transparent !important;
+  }
+}
+
+</style>
+
+<body>
+
+  <!-- =========================================
+       OPTIONAL TOP CONTACT BAR
+       Currently commented out; uncomment to show it
+       ========================================= -->
+
+  <!--
+  <div class="top">
+    <div class="container">
+      <span>☀ Pune-based solar energy solutions</span>
+      <span>Call us: +91 98818 55770</span>
+    </div>
+  </div>
+  -->
+
+  <!-- =========================================
+     MAIN NAVIGATION WITH MOBILE HAMBURGER
+     ========================================= -->
+<nav class="nav">
+  <div class="container navin">
+
+    <!-- Company Logo -->
+    <a href="#" class="brand-link">
+      <img
+        class="normal_logo"
+        src="images/logo.png"
+        alt="SunGET Solar Infra Pvt. Ltd."
+        title="SunGET Solar Infra Pvt. Ltd."
+      >
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <div class="links">
+      <a href="#solutions">Solutions</a>
+      <a href="#about">About</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#contact">Get a Quote</a>
+    </div>
+
+    <!-- Hamburger Toggle Button (Mobile/Tablet) -->
+    <button class="hamburger-btn" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu Dropdown / Overlay -->
+  <div class="mobile-menu" id="mobileMenu"> 
+    <div class="container mobile-menu-inner">
+      <a class="mobile-link" href="#solutions">Solutions</a>
+      <a class="mobile-link" href="#about">About</a>
+      <a class="mobile-link" href="#process">Process</a>
+      <a class="mobile-link" href="#contact">Contact</a>
+      <a class="btn full" href="#contact" id="mobileCta">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+  <!-- =========================================
+       HERO SECTION
+       ========================================= -->
+
+  <!-- =========================================
+       HERO SECTION (Updated to Match Reference Image)
+       ========================================= -->
+  <header class="hero">
+    <div class="container">
+
+      <!-- LEFT SIDE: Text, Badges, and Rating -->
+      <div class="hero-content">
+        
+        <h1>Pune, Go Solar At Zero<br>Investment!</h1>
+        
+        <p class="hero-sub">
+          Save up to 90% on electricity bills with government subsidy and easy EMI.
+        </p>
+
+        <!-- Small translucent statistic badges -->
+        <div class="hero-badges">
+          <span class="hero-badge">⏳ 10+ Years of Experience</span>
+          <span class="hero-badge">🏠 60,000+ Homes Solarised</span>
+          <span class="hero-badge">⚡ 200MW+ Installation Experience</span>
+          <span class="hero-badge">💰 ₹100Cr+ Savings Across India</span>
+        </div>
+
+        <!-- Google Rating (Floating at bottom left) -->
+        <div class="google-rating">
+          Rated <span style="color: #fbbc05;">★</span> 4.8 on Google | 15000+ ratings
+        </div>
+        
+      </div>
+
+      <!-- RIGHT SIDE: Consultation Form Card -->
+      <div class="hero-form-card">
+        <h3>Book a FREE Solar Consultation</h3>
+        <p class="form-subtitle">And save up to ₹ 78,000 with subsidy</p>
+
+        <!-- Reusing your existing .form class for core styling -->
+        <form class="form hero-form" id="heroLeadForm">
+          
+          <input name="name" required placeholder="Full Name">
+          <input name="whatsapp" required type="tel" placeholder="Whatsapp Number">
+          <input name="Email" required type="email" placeholder="Email ID">
+        <input name="pincode" required type="text" placeholder="PIN Code">
+
+          <!-- Pill-shaped Monthly Electricity Bill selection -->
+          <div class="bill-options-wrapper">
+            <label class="field-label">Monthly Electricity Bill ⓘ</label>
+            <div class="bill-options">
+              <label class="bill-radio">
+                <input type="radio" name="bill" value="less_1500" required>
+                <span>Less than ₹1500</span>
+              </label>
+              <label class="bill-radio">
+                <input type="radio" name="bill" value="1500_2500">
+                <span>₹1500 - ₹2500</span>
+              </label>
+              <label class="bill-radio">
+                <input type="radio" name="bill" value="2500_4000">
+                <span>₹2500 - ₹4000</span>
+              </label>
+              <label class="bill-radio">
+                <input type="radio" name="bill" value="4000_8000">
+                <span>₹4000 - ₹8000</span>
+              </label>
+              <label class="bill-radio">
+                <input type="radio" name="bill" value="more_8000">
+                <span>More than ₹8000</span>
+              </label>
+            </div>
+          </div>
+
+          
+
+          <!-- Terms/privacy checkbox -->
+          <div class="terms-check">
+  <!-- Added ID and Name for proper form submission -->
+  <input type="checkbox" id="termsAgree" name="terms_agree" required checked>
+  
+  <!-- Changed span to a label tied to the checkbox ID -->
+  <label for="termsAgree"> I agree to SunGET Solar Infra 
+    <a href="#" target="_blank" style="text-decoration: underline; color: #0b1536;">Terms of use</a> and 
+    <a href="#" target="_blank" style="text-decoration: underline; color: #0b1536;">Privacy Policy</a>.
+  </label>
+</div>
+          <!-- Dark CTA button -->
+          <button class="btn full form-cta" type="submit">
+            Book a FREE Consultation
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================
+       COMPANY HIGHLIGHTS
+       ========================================= -->
+
+  <div class="stats">
+    <div class="container">
+
+      <div class="stat">
+        <b>10+</b>
+        <span>Years of experience</span>
+      </div>
+
+      <div class="stat">
+        <b>360°</b>
+        <span>End-to-end support</span>
+      </div>
+
+      <div class="stat">
+        <b>100%</b>
+        <span>Focused on quality</span>
+      </div>
+
+      <div class="stat">
+        <b>Pune</b>
+        <span>Rooted in Maharashtra</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       SOLUTIONS SECTION
+       ========================================= -->
+
+  <section id="solutions">
+    <div class="container">
+
+      <!-- Section heading and introduction -->
+      <div class="section-head">
+        <span class="eyebrow">
+          <i class="dot"></i>
+          What we do
+        </span>
+
+        <h2>Solar solutions built around your needs.</h2>
+
+        <p>
+          From rooftop generation to long-term maintenance, SunGET helps
+          you make the switch to reliable, cleaner energy.
+        </p>
+      </div>
+
+      <!-- Service cards -->
+      <div class="cards">
+        <!-- Service 1: Residential and commercial rooftop solar -->
+        <article class="card">
+          <div class="icon">☀️</div>
+          <h3>Solar Rooftop</h3>
+          <p>
+            Grid-connected rooftop systems for residential, commercial
+            and institutional applications.
+          </p>
+        </article>
+
+        <!-- Service 2: End-to-end solar project execution -->
+        <article class="card">
+          <div class="icon">🏭</div>
+          <h3>Solar EPC</h3>
+          <p>
+            Concept, engineering, procurement, installation and
+            commissioning for solar power projects.
+          </p>
+        </article>
+
+        <!-- Service 3: Maintenance and repair -->
+        <article class="card">
+          <div class="icon">🛠️</div>
+          <h3>O&M &amp; Repair</h3>
+          <p>
+            Maintenance and repair support designed to keep your solar
+            installation performing reliably.
+          </p>
+        </article>
+
+        <!-- Service 4: Energy consumption assessments -->
+        <article class="card">
+          <div class="icon">📊</div>
+          <h3>Energy Audit</h3>
+          <p>
+            Practical energy assessments for residential, commercial
+            and industrial users.
+          </p>
+        </article>
+
+        <!-- Service 5: Solar-powered hot water systems -->
+        <article class="card">
+          <div class="icon">💧</div>
+          <h3>Solar Water Heater</h3>
+          <p>
+            Efficient hot-water solutions that use the sun as a
+            renewable energy source.
+          </p>
+        </article>
+
+        <!-- Service 6: Heat pump solutions -->
+        <article class="card">
+          <div class="icon">♨️</div>
+          <h3>Heat Pumps</h3>
+          <p>
+            Modern, efficient water-heating technology for multiple applications.
+          </p>
+        </article>
+
+        <!-- Service 7: Documentation and coordination -->
+        <article class="card">
+          <div class="icon">📝</div>
+          <h3>Liasoning</h3>
+          <p>
+            Support with documentation and coordination to make
+            solar adoption easier.
+          </p>
+        </article>
+
+        <!-- Service 8: Community outreach and CSR initiatives -->
+        <article class="card">
+          <div class="icon">🌱</div>
+          <h3>CSR &amp; Awareness</h3>
+          <p>
+            Initiatives that help communities understand the social
+            and environmental value of solar.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       ABOUT SECTION
+       ========================================= -->
+
+
+  <!-- =========================================
+       WHY CHOOSE US SECTION (Glassmorphism & Dark Background)
+       ========================================= -->
+  <section class="why-choose" id="about">
+    <div class="container relative-container">
+      
+      <!-- Section Header -->
+      <div class="section-head why-head">
+        <span class="eyebrow why-eyebrow">
+          <i class="dot why-dot"></i> The SunGET Advantage
+        </span>
+        <h2>Why Choose SunGET Solar Infra?</h2>
+        <p>
+          Reliable solar solutions designed to deliver long-term savings, sustainable energy, and dependable performance.
+        </p>
+      </div>
+
+      <!-- Feature Cards Grid -->
+      <!-- Feature Cards Grid -->
+      <div class="why-grid">
+        
+        <!-- Card 1 -->
+        <div class="why-card">
+          <!-- Hover Image: Quality Solar Panels -->
+          <div class="why-card-bg" style="background-image: url('https://riyoelectricalslimited.com/wp-content/uploads/2025/10/Best-Solar-Company-in-Mumbai-%E2%80%93-Riyo-Electricals-Limited-Trusted-Solar-Solutions.webp');"></div>
+          
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Quality Solar Solutions</h3>
+          <p>High-quality solar products and professional installations designed for reliable long-term performance.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="why-card">
+          <!-- Hover Image: Professional Installers -->
+          <div class="why-card-bg" style="background-image: url('https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80');"></div>
+
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+          </div>
+          <h3>Expertise & Experience</h3>
+          <p>Skilled professionals providing dependable solar solutions tailored to customer requirements.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="why-card">
+          <!-- Hover Image: Home Energy Savings -->
+          <div class="why-card-bg" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKL-0whZEMTh2mRYj5JQUZxkSa1Edn0uwfxE3c8k_yIUqPm6x2iOBBQC_T&s=10');"></div>
+
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 8h12M6 13h3.5c4.5 0 4.5-5 4.5-5M6 13l6 8"/></svg>
+          </div>
+          <h3>Cost Savings</h3>
+          <p>Efficient solar systems that help reduce electricity costs and improve long-term energy savings.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="why-card">
+          <!-- Hover Image: Professional Customer Service -->
+          <div class="why-card-bg" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80');"></div>
+
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Trusted Service</h3>
+          <p>Transparent communication, professional guidance, and customer-focused service.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="why-card">
+          <!-- Hover Image: Sustainable Landscape -->
+          <div class="why-card-bg" style="background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80');"></div>
+
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg>
+          </div>
+          <h3>Sustainable Future</h3>
+          <p>Clean and renewable energy solutions that help create a greener and more sustainable future.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="why-card">
+          <!-- Hover Image: Technician Support -->
+          <div class="why-card-bg" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80');"></div>
+
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.05 5A5 5 0 0119 8.95M15.05 1A9 9 0 0123 8.94m-1 7.98v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <h3>Complete Support</h3>
+          <p>End-to-end assistance from consultation and system design to installation and after-sales support.</p>
+        </div>
+
+      </div>
+  </section>
+
+ <!-- =========================================
+     PROJECT PROCESS SECTION (FULL CARD IMAGE OVERLAY)
+     ========================================= -->
+
+<section id="process">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">
+        <i class="dot"></i>
+        Simple process
+      </span>
+
+      <h2>From first conversation to clean power.</h2>
+    </div>
+
+    <!-- Five process cards with background images and text overlays -->
+    <div class="process">
+
+      <div class="step step-bg" style="--bg-url: url('https://cdn.prod.website-files.com/63a02e61e7ffb565c30bcfc7/649d01dedeb97c4a8df37212_Solar%20Sales%20Consultant.webp')">
+        <div class="step-overlay"></div>
+        <div class="step-content">
+          <div class="num">01</div>
+          <h3>Consult</h3>
+          <p>Understand your electricity use, goals and budget.</p>
+        </div>
+      </div>
+
+      <div class="step step-bg" style="--bg-url: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqPx4h-jh2fieOSKXaFYUT0NcVb_PzXN8717PktH8hlw&s=10')">
+        <div class="step-overlay"></div>
+        <div class="step-content">
+          <div class="num">02</div>
+          <h3>Survey</h3>
+          <p>Assess the site, roof, load and solar potential.</p>
+        </div>
+      </div>
+
+      <div class="step step-bg" style="--bg-url: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80')">
+        <div class="step-overlay"></div>
+        <div class="step-content">
+          <div class="num">03</div>
+          <h3>Design</h3>
+          <p>Create the right system and commercial proposal.</p>
+        </div>
+      </div>
+
+      <div class="step step-bg" style="--bg-url: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80')">
+        <div class="step-overlay"></div>
+        <div class="step-content">
+          <div class="num">04</div>
+          <h3>Install</h3>
+          <p>Execute installation, testing and commissioning.</p>
+        </div>
+      </div>
+
+      <div class="step step-bg" style="--bg-url: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80')">
+        <div class="step-overlay"></div>
+        <div class="step-content">
+          <div class="num">05</div>
+          <h3>Support</h3>
+          <p>Keep the system healthy with ongoing service.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- =========================================
+       CALL-TO-ACTION SECTION
+       ========================================= -->
+
+  <section class="cta">
+    <div class="container">
+
+      <div class="cta-box">
+        <div>
+          <span class="eyebrow" style="color:var(--lime)">
+            Ready to switch?
+          </span>
+
+          <h2>Let's design your solar future.</h2>
+
+          <p>
+            Share your electricity bill or basic requirements and our
+            team can help you understand the right next step.
+          </p>
+        </div>
+
+        <!-- Scrolls down to the enquiry form -->
+        <a class="btn" href="#contact">
+          Request a Consultation →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       CONTACT SECTION
+       ========================================= -->
+
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="eyebrow">
+          <i class="dot"></i>
+          Get in touch
+        </span>
+
+        <h2>Tell us what you want to power.</h2>
+
+        <p>
+          Use the form for a solar consultation, site survey,
+          maintenance request or general enquiry.
+        </p>
+      </div>
+
+      <div class="contactgrid">
+
+        <!-- Company phone, email, and addresses -->
+        <div class="contact-info">
+
+          <div class="info">
+            <small>Call</small>
+            <b>+91 98818 55770</b>
+          </div>
+
+          <div class="info">
+            <small>Email</small>
+            <b>sales@sungetsolarinfra.com</b>
+          </div>
+
+          <div class="info">
+            <small>Office</small>
+            <b>
+              Renuka Industries Estate, Near Darshana Properties,
+              Opp. Abhiruchi Parisar, Narhe, Pune 411041
+            </b>
+          </div>
+
+          <div class="info">
+            <small>Registered Address</small>
+            <b>
+              1447/48, Keshavsut Rd, Perugate,
+              Sadashiv Peth, Pune 411030
+            </b>
+          </div>
+
+        </div>
+
+        <form class="form" id="leadForm">
+
+          <!-- Required customer name -->
+          <input
+            name="name"
+            required
+            placeholder="Your name"
+          >
+
+          <!-- Required customer phone number -->
+          <input
+            name="phone"
+            required
+            type="tel"
+            placeholder="Phone number"
+          >
+
+          <!-- Optional email address -->
+          <input
+            name="email"
+            type="email"
+            placeholder="Email address"
+          >
+
+          <!-- Customer selects their service requirement -->
+          <select name="interest">
+            <option value="">I'm interested in...</option>
+            <option value="Residential Solar">Residential Solar</option>
+            <option value="Commercial / Industrial Solar">
+              Commercial / Industrial Solar
+            </option>
+            <option value="Solar Water Heater">Solar Water Heater</option>
+            <option value="Maintenance / Repair">Maintenance / Repair</option>
+            <option value="Energy Audit">Energy Audit</option>
+          </select>
+
+          <!-- Optional detailed customer message -->
+          <textarea
+            name="message"
+            placeholder="Tell us about your electricity bill, site or requirement..."
+          ></textarea>
+
+          <!-- Submit button for the enquiry form -->
+          <button class="btn full" type="submit">
+            Send Enquiry →
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+
+  <footer>
+    <div class="container">
+
+      <div class="foot">
+
+        <!-- Footer branding and company description -->
+        <div>
+          <a class="brand" href="#" style="color:#fff">
+            <span class="mark"></span>
+            <span>
+              SunGET
+              <small style="color:#9fb8aa">
+                SOLAR INFRA PVT. LTD.
+              </small>
+            </span>
+          </a>
+
+          <p>
+            Powering a smarter, cleaner and more sustainable future
+            with practical solar solutions.
+          </p>
+        </div>
+
+        <!-- Footer quick navigation links -->
+        <div class="footlinks">
+          <a href="#solutions">Solutions</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+      </div>
+
+      <!-- Copyright notice -->
+      <div class="copy">
+        © 2026 SunGET Solar Infra Pvt. Ltd. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================
+       SUCCESS NOTIFICATION
+       ========================================= -->
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    Thanks! Your enquiry form is ready to connect to email/CRM.
+  </div>
+
+  <!-- Link to external JS file -->
+  <script src="script.js"></script>
+<script>
+// =========================================
+// MOBILE HAMBURGER MENU TOGGLE
+// =========================================
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileLinks = document.querySelectorAll('.mobile-link, #mobileCta');
+
+if (menuToggle && mobileMenu) {
+  // Toggle menu open/close on button click
+  menuToggle.addEventListener('click', () => {
+    const isActive = menuToggle.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', isActive);
+  });
+
+  // Automatically close menu when clicking any nav link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+// Select the enquiry form from the page.
+document.getElementById('leadForm').addEventListener('submit', e => {
+
+  // Prevent the browser's default form submission and page reload.
+  e.preventDefault();
+
+  // Display a notification after the form is submitted.
+  document.getElementById('toast').style.display = 'block';
+
+  // Hide the notification automatically after 3.5 seconds.
+  setTimeout(() => {
+    document.getElementById('toast').style.display = 'none';
+  }, 3500);
+
+  /*
+    IMPORTANT:
+    This is only a front-end demonstration.
+
+    The form does not currently send customer details to an email
+    address, database, or CRM. Add a backend or form service to
+    process and store enquiries securely.
+  */
+
+});
+// Attach functionality to the new Hero Form
+const heroForm = document.getElementById('heroLeadForm');
+if (heroForm) {
+  heroForm.addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('toast').style.display = 'block';
+    setTimeout(() => {
+      document.getElementById('toast').style.display = 'none';
+    }, 3500);
+  });
+}</script>
+</body>
+</html>
